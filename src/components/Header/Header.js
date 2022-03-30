@@ -5,7 +5,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     return (
         <div>
-            <h1 className='md:text-5xl mx-5 font-mono font-bold bg-green-500 text-white p-5 rounded-lg'>Welcome to our AmaderShop</h1>
+            <h1 className='md:text-5xl md:mx-5 font-mono font-bold bg-green-500 text-white p-5 rounded-lg'>Welcome to our AmaderShop</h1>
             <div>
                 <div className='md:hidden m-5' onClick={() => setOpen(!open)}>
                     {
@@ -16,14 +16,14 @@ const Header = () => {
                         </svg>
                     }
                 </div>
-                <div className='md:flex justify-around items-center m-5 font-bold'>
+                <div className={`md:flex justify-around items-center m-5 font-bold ${open ? "block" : "hidden"}`}>
                     <CustomLink to="/" className=" md:bg-slate-500 md:text-white md:p-2 md:rounded-md md:font-bold">Home</CustomLink>
                     <CustomLink to="/search" className=" md:bg-slate-500 md:text-white md:p-2 md:rounded-md md:font-bold">Search</CustomLink>
                     <CustomLink to="/account" className=" md:bg-slate-500 md:text-white md:p-2 md:rounded-md md:font-bold">Account</CustomLink>
                     <CustomLink to="/about" className=" md:bg-slate-500 md:text-white md:p-2 md:rounded-md md:font-bold">About</CustomLink>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
