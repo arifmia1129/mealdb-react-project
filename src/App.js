@@ -7,6 +7,7 @@ import Search from './components/Search/Search';
 import Account from './components/Account/Account';
 import About from './components/About/About';
 import Wrong from './components/Wrong/Wrong';
+import MealDetail from './components/MealDetail/MealDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='search' element={<Search></Search>}></Route>
+        <Route path='meal/:id' element={<MealDetail></MealDetail>}></Route>
         <Route path='account' element={<Account></Account>}></Route>
         <Route path='about' element={<About></About>}></Route>
         <Route path='*' element={<Wrong></Wrong>}></Route>
